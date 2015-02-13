@@ -1,0 +1,120 @@
+/*
+ * 
+ * ngAdmin - AngularJS Admin WebApp Bootstrap Twitter
+ * 
+ * Copyright 2014 bugfix
+ * 
+ */
+
+/* TEMP STYLES */
+html, h1, h2, h3, h4, h5, h6, a, b, p, span, small, footer {
+	font-family: 'Droid Sans', sans-serif !important;
+}
+
+h3 {
+	font-size: 30px !important;
+}
+
+h4 {
+	font-size: 20px !important;
+}
+
+p {
+	font-size: 12px !important;
+}
+
+html, body, [data-ui-view], [data-extend-template] {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-user-select: none; /* Chrome all / Safari all */
+	-moz-user-select: none; /* Firefox all */
+	-ms-user-select: none; /* IE 10+ */
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none;
+}
+
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+
+article {
+	margin-top: 86px;
+}
+
+.logo-django {
+	height: 36px;
+	width: 104px;
+	background: url("../images/logo-django.svg") center center no-repeat;
+	h4: after{ 
+		font-family: 'Droid Sans', sans-serif !important;
+	font-weight: bolder;
+	color: gold;
+	position: relative;
+	top: 16px;
+	left: 29px;
+	content: "3 6 0";
+	font-size: 16px;
+}
+
+}
+.module .chapters {
+	display: none;
+}
+
+.module .chapters { .module-classes a { margin:0px5px0px0px;
+	
+}
+
+;
+}
+.module .chapters {ul { li { list-style:none;
+	
+}
+
+}
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+	color: gold;
+}
+
+.user-gold {
+	color: $text-gold !important;
+}
+
+.user-silver {
+	color: $text-silver !important;
+}
+
+.user-bronze {
+	color: $text-bronze !important;
+}
+
+}
+.panel-footer span.label {
+	margin: 0px 5px 0px 0px;
+	padding: 5px;
+}
+
+.list-group-item span {
+	margin: 0px 10px 0px 0px;
+}
+
+.recommendations {
+	padding: 20px 0px;
+	
+	a {
+		&:hover,&:active,&:visited {text-decoration: none;}
+	}
+
+	h3,h4,h5 {
+		margin: 5px 0px;
+	}
+}

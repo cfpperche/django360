@@ -1,0 +1,27 @@
+/* Custom Vendor Styles */
+
+/* Custom Bootstrap Button */
+
+.btn-light {
+  @include button-variant(lighten($bg-color-dark, 15%), lighten($bg-color-dark, 20%), lighten($bg-color-dark, 15%));
+  color: lighten($default-font-color, 5%);
+  &:hover {
+    color: lighten($default-font-color, 15%);
+    @include single-text-shadow;
+  }
+}
+
+/* Angular forms validators classes */
+input.ng-pristine {
+}
+
+input.ng-dirty {
+}
+
+input.ng-valid { //
+	border: 1px solid $brand-success;
+}
+
+input.ng-invalid {
+	border: 1px solid $brand-danger;
+}

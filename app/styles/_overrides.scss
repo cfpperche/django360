@@ -1,0 +1,123 @@
+/* Overrides Vendor Styles */
+
+
+/* Custom Bootstrap Dropdown Menu */
+
+.dropdown-menu {
+	@include box-shadow(lighten($bg-color-dark, 15%) 0px 0px 10px);
+	@include border-top-left-radius(0px);
+	@include border-top-right-radius(0px);
+	
+  	i.pull-right {
+	    margin-top: 3px;
+  	}
+  	&.arrow-right:before, &.arrow-left:before {
+	    position: absolute;
+	    top: -8px;
+	    display: inline-block;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid $dropdown-bg;
+	    border-left: 10px solid transparent;
+	    content: '';
+	    -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+  	}
+	&.arrow-right:before {
+		right: 11px;
+  	}
+  	&.arrow-left:before {
+    	left: 11px;
+  	}
+  	> li > a {
+    	color: invert($default-font-color) !important;
+  	}
+  	.divider {
+    	background-color: invert($default-border-color) !important;
+  	}
+}
+
+/* Animate dropdown */
+.open > .dropdown-menu {
+  	-webkit-transform: scale(1, 1);
+  	transform: scale(1, 1);  
+  	opacity:1;
+}
+  
+.dropdown-menu {
+	display: block; 
+  	opacity:0;
+  
+  	-webkit-transform-origin: top;
+  	-ms-transform-origin: top;
+  	-moz-transform-origin: top;
+  	-o-transform-origin: top;
+  	transform-origin: top;
+	 
+  	-webkit-animation-fill-mode: forwards;  
+  	-ms-animation-fill-mode: forwards;  
+	-moz-animation-fill-mode: forwards;  
+	-o-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+	
+	-webkit-transform: scale(1, 0);
+	-ms-transform: scale(1, 0);
+	-moz-transform: scale(1, 0);
+	-o-transform: scale(1, 0);
+	transform: scale(1, 0);
+	
+	-webkit-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+/* Hover/Focus state */
+.dropdown-menu > li > a {
+	&:hover, &:focus {
+    	color: invert($default-font-color) !important;
+    	background-color: lighten($bg-color-dark, 72%);
+  	}
+}
+
+/* Custom Bootstrap Modal */
+
+.modal-dialog {
+    margin: 0;
+    clear: both;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.modal-body {
+    overflow-y: auto;
+}
+.modal-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .modal-dialog {
+    width: 100%;
+  }
+}
+
+/* Custom Angular Toasty Colours */
+/* Colours */
+.toasty-success {
+  background-color: $brand-success;
+}
+.toasty-error {
+  background-color: $brand-danger;
+}	
+.toasty-info {
+  background-color: $brand-info;
+}
+.toasty-wait {
+  background-color: $brand-primary;
+}
+.toasty-warning {
+  background-color: $brand-warning;
+}
+

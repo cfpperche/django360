@@ -1,0 +1,28 @@
+{
+  "name": "dev-frontend",
+  "version": "0.0.0",
+  "dependencies": {
+    "html5-boilerplate": "~4.3.0",
+    "json3": "~3.3.1",
+    "es5-shim": "~4.0.5",
+    "angular": "~1.4.*",
+    "angular-resource": "~1.4.*",
+    "angular-cookies": "~1.4.*",
+    "angular-sanitize": "~1.4.*",
+    "angular-animate": "~1.4.*",
+    "angular-touch": "~1.4.*",
+    "angular-route": "~1.4.*",
+    "angular-ui-router": "~0.2.13",
+    "angular-blocks": "~0.1.9",
+    "angular-toasty": "~0.1.8",
+    "angular-material": "master",
+    "bootstrap-sass-official": "latest",
+    "angular-bootstrap": "~0.12.0",
+    "font-awesome": "~4.3.0",
+    "underscore": "~1.7.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "latest",
+    "angular-scenario": "latest"
+  }
+}

@@ -1,0 +1,28 @@
+/*
+ * 
+ * ngAdmin - AngularJS Admin WebApp Bootstrap Twitter
+ * 
+ * Copyright 2014 bugfix
+ * 
+ */
+
+/* Compass helpers */
+@import "compass/css3";
+
+@import "compass/layout";
+
+/* Webapp Mixins */
+@import "mixins/css3/flex";
+
+/* Include bower components */
+/* bower:scss */
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+/* endbower */
+$icon-font-path:"../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+/* App Variables  */
+@import "variables";
+
+/* App Core */
+@import "overrides";
+@import "custom";
+@import "core";
