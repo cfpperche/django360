@@ -29,10 +29,12 @@ angular.module('application', [
 	'$locationProvider',
 	function($httpProvider, $locationProvider) {
 		// $locationProvider.html5Mode(true);
-		// $httpProvider.interceptors.push('AuthInterceptor');
-		// $httpProvider.interceptors.push('PingInterceptor');
 	}
 ])
+
+.config(function($mdThemingProvider) {
+	$mdThemingProvider.theme('default').primaryPalette('indigo').accentPalette('yellow');
+})
 
 // Routes
 .config([
@@ -50,49 +52,6 @@ angular.module('application', [
 		});
 
 		$urlRouterProvider.otherwise('/');
-	}
-])
-
-.run(function() { // instance-injector
-	// This is an example of a run block.
-	// You can have as many of these as you want.
-	// You can only inject instances (not Providers)
-	// into run blocks
-})
-
-.factory("reactiveFactory", [
-	function reactiveFactory() {
-		return {
-			// Execute an action after a period of time without calls
-			getThrottle : _createThrottle
-		};
-
-		function _createThrottle(delay) {
-			var throttleTimer = null;
-			var throttleDelay = delay;
-
-			if (!throttleDelay) {
-				// use default value 250ms
-				throttleDelay = 250;
-			}
-
-			return {
-				run : function(action) {
-					return function() {
-						clearTimeout(throttleTimer);
-
-						throttleTimer = setTimeout(function() {
-							// execute action
-							action.apply();
-
-							// dispose timer
-							throttleTimer = null;
-						}, throttleDelay);
-					}();
-				}
-			};
-		}
-
 	}
 ])
 

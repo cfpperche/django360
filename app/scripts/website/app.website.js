@@ -12,7 +12,6 @@ angular.module('app.website', [
 	'app.website.directives',
 	'app.website.modules',
 	'app.website.project',
-	'app.website.motivation',
 	'app.website.recommendations',
 	'app.website.technologies',
 	'app.website.mainSubjects'

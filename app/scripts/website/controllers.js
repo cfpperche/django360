@@ -21,12 +21,6 @@ angular.module('app.website.controllers', [])
 				content : "coming soon"
 			},
 			{
-				name : 'motivation',
-				title : 'Motivação',
-				icon : 'fa fa-user',
-				content : "coming soon"
-			},
-			{
 				name : 'main_subjects',
 				title : 'Principais assuntos',
 				icon : 'fa fa-user',
@@ -58,7 +52,7 @@ angular.module('app.website.controllers', [])
 			}
 		];
 		$scope.tabs = tabs;
-		$scope.selectedIndex = 4;
+		$scope.selectedIndex = 3;
 		$scope.selectedTabOnChange = function(tab) {
 			var newIndex = $scope.tabs.indexOf(tab);
 			$scope.selectedIndex = newIndex;

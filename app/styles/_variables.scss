@@ -1,49 +1,5 @@
-/* Webapp variables */
+/* Django 360 variables */
 
 $text-gold: #C98910 !default;
 $text-silver: #A8A8A8 !default;
 $text-bronze: #965A38 !default;
-
-$bg-color-dark: #3f3f3f !default;
-$bg-color-light: #f3f3f3 !default;
-
-$default-font-color: invert(darken($bg-color-dark, 10%)) !default;
-$default-hover-font-color: lighten($default-font-color, 40%) !default;
-
-$dark-font-color: darken($bg-color-dark,7%) !default;
-
-$default-border-color: darken($bg-color-dark, 10%) !default;
-
-/* Webapp layouts colors  */
-
-/* Header */
-$header-height: 52px !default;
-$header-bg-color-start: $bg-color-light !default;
-$header-bg-color-end: $bg-color-dark !default;
-$header-border-bottom: $default-border-color !default;
-
-/* Main  */
-$main-bg-color: $bg-color-light !default;
-$main-bg-grid-color: #e2e2e2 !default;
-/* Content */
-$content-bg-color: $bg-color-light !default;
-
-/* menu-Left */
-$menu-width: 235px !default;
-
-$menu-bg-color: $bg-color-dark !default;
-$menu-submenu-bg-color: lighten($bg-color-dark, 2%) !default;
-$menu-hover-bg-color: darken($bg-color-dark, 5%) !default;
-$menu-border-color: $default-border-color !default;
-$menu-arrow-active-menu-color: $main-bg-color !default;
-
-/* Ribbon */
-$ribbon-height: 50px !default;
-$ribbon-bg-color: $bg-color-dark !default;
-
-/* Footer */
-$footer-height: 35px;
-$footer-bg-color: $bg-color-dark !default;
-$footer-go-top-bg-color: lighten($bg-color-dark, 7%) !default;
-$footer-go-top-icon-font-color: $default-font-color !default;
-$footer-border-top: $default-border-color !default;

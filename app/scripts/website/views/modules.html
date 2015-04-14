@@ -1,9 +1,5 @@
 <div layout="row" layout-fill ng-controller="ModulesCtrl">
 	<div id="quickmenu">
-		<div layout="row">
-			<input style="margin: 0 0 20px 40px;" type="text"
-				class="form-control" placeholder="Search for...">
-		</div>
 		<div layout="column">
 			<ul ng-repeat="module in modules track by $index" class="module">
 				<a href="" ng-click="gotoAnchor($index+1)">{{$index+1}} -
@@ -57,7 +53,7 @@
 			<ul class="list-group chapters">
 				<li ng-repeat="chapter in module.chapters track by $index"
 					class="list-group-item">
-					<div layout="row" layout-align="space-arround center">
+					<div layout="row">
 						<span>
 							<i class="fa fa-caret-right"></i>
 							{{chapter.name}}
@@ -90,10 +86,6 @@
 				<div>
 					<span class="label label-info">
 						<i class="fa fa-lg fa-unlock-alt"> 0 de
-							{{module.chapters.length}} </i>
-					</span>
-					<span class="label label-info">
-						<i class="fa fa-lg fa-graduation-cap"> 0 de
 							{{module.chapters.length}} </i>
 					</span>
 				</div>

@@ -3,7 +3,7 @@
 		<div layout="row" layout-fill layout-align="start center" class="md-toolbar-tools">
 			<div class="logo-django"><h4></h4></div>
 			<div flex>
-			  	<md-tabs md-stretch-tabs="never" md-selected="selectedIndex">
+			  	<md-tabs md-center-tabs md-stretch-tabs="never" md-selected="selectedIndex" class="md-primary">
 				    <md-tab ng-repeat="tab in tabs track by $index" 
 				    		ng-disabled="tab.disabled" 
 				    		md-on-select="selectedTabOnChange(tab)">
@@ -14,8 +14,8 @@
 			  	</md-tabs>
 			</div>
 			<div>
-				<md-button class="md-raised md-primary md-hue-2">sign in</md-button>
-				<md-button class="md-raised md-primary md-hue-2">sign up</md-button>
+				<md-button class="md-raised md-primary">sign in</md-button>
+				<md-button class="md-raised md-primary">sign up</md-button>
 			</div>
 		</div>
 	</md-toolbar>

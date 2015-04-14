@@ -17,7 +17,7 @@ angular.module('app.website.modules', [])
 	function($scope, $state, anchorSmoothScroll, $location, $log) {
 		$scope.gotoAnchor = function(elementId) {
 			var newHash = 'module' + elementId;
-//			$location.hash(newHash);
+			// $location.hash(newHash);
 			anchorSmoothScroll.scrollTo(newHash);
 		};
 
@@ -1631,13 +1631,13 @@ angular.module('app.website.modules', [])
 				]
 			},
 			{
-				name : 'Projeto WEB Dojo',
+				name : 'Projeto prático',
 				icon : 'fa-check',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
 					{
-						name : 'Criando o projeto WebDojo',
+						name : 'Criando o projeto prático',
 
 						video : {
 							url : 'link',
@@ -1647,6 +1647,124 @@ angular.module('app.website.modules', [])
 							url : 'link'
 						}
 					}
+				]
+			},
+			{
+				name : 'Django 1.7 para 1.8',
+				icon : 'fa-check',
+				about : 'Sobre',
+				type : 'silver',
+				chapters : [
+					{
+						name : 'Introdução',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'Motores de Template',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'URLs',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'PostgreSQL',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'PostgreSQL: ArrayField',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'PostgreSQL: HStoreField',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'PostgreSQL: Range Fields',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'Novos Data Types',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'Model._meta API',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'ORM API',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
 				]
 			},
 		];

@@ -52,52 +52,54 @@ article {
 	height: 36px;
 	width: 104px;
 	background: url("../images/logo-django.svg") center center no-repeat;
-	h4: after{ 
+	h4:after {
 		font-family: 'Droid Sans', sans-serif !important;
-	font-weight: bolder;
-	color: gold;
-	position: relative;
-	top: 16px;
-	left: 29px;
-	content: "3 6 0";
-	font-size: 16px;
+		font-weight: bolder;
+		color: gold;
+		position: relative;
+		top: 16px;
+		left: 29px;
+		content: "3 6 0";
+		font-size: 16px;
+	}
 }
 
-}
 .module .chapters {
 	display: none;
 }
 
-.module .chapters { .module-classes a { margin:0px5px0px0px;
+.module .chapters { 
+	.module-classes a { 
+		margin: 0px 5px 0px 0px;
+	}
+}
+
+.module .chapters {
+	ul { 
+		li { 
+			list-style:none;
+		}
+	}
 	
+	a:hover {
+		text-decoration: none;
+		cursor: pointer;
+		color: gold;
+	}
+
+	.user-gold {
+		color: $text-gold !important;
+	}
+
+	.user-silver {
+		color: $text-silver !important;
+	}
+
+	.user-bronze {
+		color: $text-bronze !important;
+	}
 }
 
-;
-}
-.module .chapters {ul { li { list-style:none;
-	
-}
-
-}
-a:hover {
-	text-decoration: none;
-	cursor: pointer;
-	color: gold;
-}
-
-.user-gold {
-	color: $text-gold !important;
-}
-
-.user-silver {
-	color: $text-silver !important;
-}
-
-.user-bronze {
-	color: $text-bronze !important;
-}
-
-}
 .panel-footer span.label {
 	margin: 0px 5px 0px 0px;
 	padding: 5px;
@@ -111,10 +113,12 @@ a:hover {
 	padding: 20px 0px;
 	
 	a {
-		&:hover,&:active,&:visited {text-decoration: none;}
+		&:hover, &:active, &:visited {
+			text-decoration: none;
+		}
 	}
 
-	h3,h4,h5 {
+	h3, h4, h5 {
 		margin: 5px 0px;
 	}
 }

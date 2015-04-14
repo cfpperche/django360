@@ -34,6 +34,15 @@ angular.module('app.website.recommendations', [])
 				about : 'about course',
 				my_opinion : 'my opinion'
 			},
+			{
+				name : 'loiane',
+				title : 'Loiane Groner',
+				autor : 'Loiane Groner',
+				img : 'images/loiane.jpg',
+				link : 'http://www.loiane.com/cursos/',
+				about : 'about course',
+				my_opinion : 'my opinion'
+			},
 		]
 
 	}
