@@ -13,11 +13,13 @@
 			<!-- panel-heading -->
 			<div layout="row" layout-fill layout-align="start center"
 				class="panel-heading">
-				<div>
-					<span class="fa-stack fa-5x">
-						<i class="fa fa-circle fa-stack-2x"></i>
-						<i class="fa {{module.icon}}  fa-stack-1x fa-inverse text-primary"></i>
-					</span>
+				<div style="margin-right: 6px;">
+					<img alt="{{module.name}}" src="{{module.icon}}"
+						class="img-rounded" style="height: 128px; width: 128px;">
+					<!-- <span class="fa-stack fa-5x"> -->
+					<!-- <i class="fa fa-circle fa-stack-2x"></i> -->
+					<!-- <i class="fa {{module.icon}}  fa-stack-1x fa-inverse text-primary"></i> -->
+					<!-- </span> -->
 				</div>
 				<div>
 					<h4>Módulo {{$index+1}}</h4>

@@ -24,7 +24,7 @@ angular.module('app.website.modules', [])
 		$scope.modules = [
 			{
 				name : 'Fundamentos',
-				icon : 'fa-check',
+				icon : 'images/modules/foundamentals.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -66,7 +66,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Ambiente de desenvolvimento',
-				icon : 'fa-check',
+				icon : 'images/modules/environment.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -129,7 +129,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Organização do projeto',
-				icon : 'fa-check',
+				icon : 'images/modules/organization.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -170,7 +170,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Base de dados',
-				icon : 'fa-check',
+				icon : 'images/modules/database.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -222,7 +222,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Models',
-				icon : 'fa-check',
+				icon : 'images/modules/models.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -329,7 +329,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Migrations',
-				icon : 'fa-check',
+				icon : 'images/modules/migrations.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -370,7 +370,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Views',
-				icon : 'fa-check',
+				icon : 'images/modules/views.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -444,7 +444,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Class Base Views',
-				icon : 'fa-check',
+				icon : 'images/modules/cbv.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -595,7 +595,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Templates',
-				icon : 'fa-check',
+				icon : 'images/modules/templates.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -669,7 +669,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Statics & Media',
-				icon : 'fa-check',
+				icon : 'images/modules/statics.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -699,7 +699,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Forms',
-				icon : 'fa-check',
+				icon : 'images/modules/forms.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -784,7 +784,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Signals',
-				icon : 'fa-check',
+				icon : 'images/modules/signals.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -836,7 +836,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Ajax',
-				icon : 'fa-check',
+				icon : 'images/modules/ajax.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -888,7 +888,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Criandos APIs',
-				icon : 'fa-check',
+				icon : 'images/modules/apis.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -962,7 +962,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Contrib Admin',
-				icon : 'fa-check',
+				icon : 'images/modules/admin.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1025,7 +1025,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Contrib Auth',
-				icon : 'fa-check',
+				icon : 'images/modules/auth.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1088,7 +1088,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Emails',
-				icon : 'fa-check',
+				icon : 'images/modules/emails.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1118,7 +1118,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Testes automatizados',
-				icon : 'fa-check',
+				icon : 'images/modules/tests.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1170,7 +1170,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Caching',
-				icon : 'fa-check',
+				icon : 'images/modules/cache.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1222,7 +1222,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Deployment',
-				icon : 'fa-check',
+				icon : 'images/modules/deployment.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1285,7 +1285,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Python Social Auth',
-				icon : 'fa-check',
+				icon : 'images/modules/social.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1370,7 +1370,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Pagamentos',
-				icon : 'fa-check',
+				icon : 'images/modules/payment.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1411,7 +1411,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Celery',
-				icon : 'fa-check',
+				icon : 'images/modules/celery.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1463,7 +1463,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Segurança',
-				icon : 'fa-check',
+				icon : 'images/modules/security.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1515,7 +1515,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Otimização',
-				icon : 'fa-check',
+				icon : 'images/modules/optimization.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1545,7 +1545,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Relatórios',
-				icon : 'fa-check',
+				icon : 'images/modules/reports.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1575,7 +1575,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Bonus: Integrando com Tornado',
-				icon : 'fa-check',
+				icon : 'images/modules/tornado.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1594,7 +1594,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Bonus: Integrando com NodeJs',
-				icon : 'fa-check',
+				icon : 'images/modules/nodejs.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1613,7 +1613,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Bonus: Integrando com AngularJs',
-				icon : 'fa-check',
+				icon : 'images/modules/angularjs.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1632,7 +1632,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Projeto prático',
-				icon : 'fa-check',
+				icon : 'images/modules/project.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1651,7 +1651,7 @@ angular.module('app.website.modules', [])
 			},
 			{
 				name : 'Django 1.7 para 1.8',
-				icon : 'fa-check',
+				icon : 'images/modules/upgrade_dj.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
@@ -1756,6 +1756,17 @@ angular.module('app.website.modules', [])
 					},
 					{
 						name : 'ORM API',
+
+						video : {
+							url : 'link',
+							time : '0:00'
+						},
+						pdf : {
+							url : 'link'
+						}
+					},
+					{
+						name : 'Aplicação',
 
 						video : {
 							url : 'link',
