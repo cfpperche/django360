@@ -4,7 +4,7 @@
 			<div ng-repeat="rec in recommendations" class="recommendations">
 				<a href="{{rec.link}}" target="_blank">
 					<div layout="row">
-						<img alt="" src="{{rec.img}}"
+						<img alt="" ng-src="{{rec.img}}"
 							style="max-height: 100px; max-width: 100px;">
 						<div layout="column">
 							<h3>{{rec.title}}</h3>

@@ -23,14 +23,13 @@ angular.module('app.website.modules', [])
 
 		$scope.modules = [
 			{
-				name : 'Fundamentos',
-				icon : 'images/modules/foundamentals.png',
+				name : 'Introdução',
+				icon : 'images/modules/introduction.png',
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
 					{
 						name : 'Olá mundo',
-
 						video : {
 							url : 'link',
 							time : '0:00'
@@ -41,8 +40,7 @@ angular.module('app.website.modules', [])
 
 					},
 					{
-						name : 'Introdução',
-
+						name : 'Fundamentos',
 						video : {
 							url : 'link',
 							time : '0:00'
@@ -70,17 +68,6 @@ angular.module('app.website.modules', [])
 				about : 'Sobre',
 				type : 'silver',
 				chapters : [
-					{
-						name : 'Fundamentos',
-
-						video : {
-							url : 'link',
-							time : '0:00'
-						},
-						pdf : {
-							url : 'link'
-						}
-					},
 					{
 						name : 'Ambientes virtuais',
 
