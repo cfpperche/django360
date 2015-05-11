@@ -1196,7 +1196,7 @@ angular.module('app.website.modules', [])
 					},
 					{
 						name : 'Redis',
-
+						
 						video : {
 							url : 'link',
 							time : '0:00'
