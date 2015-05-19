@@ -17,6 +17,7 @@ angular.module('application', [
 	'ngMaterial',
 	'angular-blocks',
 	'toasty',
+	'angularUtils.directives.dirDisqus',
 	'app.website'
 ])
 

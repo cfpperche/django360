@@ -39,12 +39,6 @@ angular.module('app.website.controllers', [])
 				content : "coming soon"
 			},
 			{
-				name : 'project',
-				title : 'Projeto',
-				icon : 'fa fa-user',
-				content : "coming soon"
-			},
-			{
 				name : 'recommendations',
 				title : 'Recomendo',
 				icon : 'fa fa-user',

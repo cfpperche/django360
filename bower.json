@@ -19,7 +19,9 @@
     "bootstrap-sass-official": "latest",
     "angular-bootstrap": "~0.12.0",
     "font-awesome": "~4.3.0",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "install": "~1.0.4",
+    "angular-utils-disqus": "~0.2.0"
   },
   "devDependencies": {
     "angular-mocks": "latest",

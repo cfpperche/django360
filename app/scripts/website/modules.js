@@ -874,7 +874,7 @@ angular.module('app.website.modules', [])
 				]
 			},
 			{
-				name : 'Criandos APIs',
+				name : 'Criando APIs',
 				icon : 'images/modules/apis.png',
 				about : 'Sobre',
 				type : 'silver',
