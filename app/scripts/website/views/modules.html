@@ -93,7 +93,8 @@
 				</div>
 				<div>
 					<span class="label label-warning">
-						<a href="" style="color: #fff;">
+						<a ng-click="openComments('lg', module.disqus)" href=""
+							style="color: #fff;">
 							<i class="fa fa-lg fa-comments-o"> 0 Comentários </i>
 						</a>
 					</span>
@@ -103,3 +104,19 @@
 
 	</div>
 </div>
+
+<script type="text/ng-template" id="modalComments.html">
+
+<div class="modal-header">
+	<h3 class="modal-title">{{disqus.title}}</h3>
+</div>
+<div class="modal-body">
+	<dir-disqus disqus-shortname="disqus.shortname"
+		disqus-identifier="{{ disqus.id }}" disqus-url="{{ disqus.url }}"
+		ready-to-bind="true"> </dir-disqus>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" ng-click="close()">Close</button>
+</div>
+</script>
+

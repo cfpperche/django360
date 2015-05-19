@@ -8,17 +8,54 @@
 
 angular.module('app.website.modules', [])
 
+.controller('modalController', [
+	'$scope',
+	'$modalInstance',
+	'disqus',
+	function($scope, $modalInstance, disqus) {
+		$scope.disqus = disqus;
+
+		$scope.close = function() {
+			$modalInstance.dismiss('close');
+		};
+	}
+])
+
 .controller('ModulesCtrl', [
 	'$scope',
 	'$state',
 	'anchorSmoothScroll',
 	'$location',
 	'$log',
-	function($scope, $state, anchorSmoothScroll, $location, $log) {
+	'$modal',
+	function($scope, $state, anchorSmoothScroll, $location, $log, $modal) {
+
 		$scope.gotoAnchor = function(elementId) {
 			var newHash = 'module' + elementId;
 			// $location.hash(newHash);
 			anchorSmoothScroll.scrollTo(newHash);
+		};
+
+		$scope.openComments = function(size, moduledisqus) {
+
+			$scope.disqus = moduledisqus;
+
+			var modalInstance = $modal.open({
+				animation : true,
+				templateUrl : 'modalComments.html',
+				controller : 'modalController',
+				size : size,
+				resolve : {
+					disqus : function() {
+						return $scope.disqus;
+					}
+				}
+			});
+
+			modalInstance.result.then(function() {
+			}, function() {
+				$log.info('Modal dismissed at: ' + new Date());
+			});
 		};
 
 		$scope.modules = [
@@ -27,6 +64,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/introduction.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360introducao',
+					'id' : 'introducao',
+					'title' : 'Comentários de Introdução',
+					'url' : location.href + 'modules/introduction'
+				},
 				chapters : [
 					{
 						name : 'Olá mundo',
@@ -1196,7 +1239,7 @@ angular.module('app.website.modules', [])
 					},
 					{
 						name : 'Redis',
-						
+
 						video : {
 							url : 'link',
 							time : '0:00'
