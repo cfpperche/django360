@@ -108,10 +108,10 @@
 <script type="text/ng-template" id="modalComments.html">
 
 <div class="modal-header">
-	<h3 class="modal-title">{{disqus.title}}</h3>
+	<h3 class="modal-title">{{disqus.title}} {{disqus.shortname}}</h3>
 </div>
 <div class="modal-body">
-	<dir-disqus disqus-shortname="disqus.shortname"
+	<dir-disqus disqus-shortname="{{ disqus.shortname }}"
 		disqus-identifier="{{ disqus.id }}" disqus-url="{{ disqus.url }}"
 		ready-to-bind="true"> </dir-disqus>
 </div>

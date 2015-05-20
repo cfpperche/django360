@@ -38,6 +38,10 @@ angular.module('app.website.modules', [])
 
 		$scope.openComments = function(size, moduledisqus) {
 
+			if ($scope.disqus) {
+				delete $scope.disqus;
+			};
+
 			$scope.disqus = moduledisqus;
 
 			var modalInstance = $modal.open({
@@ -66,9 +70,9 @@ angular.module('app.website.modules', [])
 				type : 'silver',
 				disqus : {
 					'shortname' : 'dj360introducao',
-					'id' : 'introducao',
-					'title' : 'Comentários de Introdução',
-					'url' : location.href + 'modules/introduction'
+					'id' : '/modules/introduction',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/introduction',
 				},
 				chapters : [
 					{
@@ -110,6 +114,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/environment.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360ambientededesenvolvimento',
+					'id' : '/modules/ambientededesenvolvimento',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/ambientededesenvolvimento',
+				},
 				chapters : [
 					{
 						name : 'Ambientes virtuais',
@@ -162,6 +172,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/organization.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360organizacaodoprojeto',
+					'id' : '/modules/organizacaodoprojeto',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/organizacaodoprojeto',
+				},
 				chapters : [
 					{
 						name : 'Concepção do projeto',
@@ -203,6 +219,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/database.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360basededados',
+					'id' : '/modules/basededados',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/basededados',
+				},
 				chapters : [
 					{
 						name : 'SQLite',
@@ -255,6 +277,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/models.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360models',
+					'id' : '/modules/models',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/models',
+				},
 				chapters : [
 					{
 						name : 'Sintaxe',
@@ -362,6 +390,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/migrations.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360migrations',
+					'id' : '/modules/migrations',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/migrations',
+				},
 				chapters : [
 					{
 						name : 'Diferenças entre Django 1.6 e 1.7',
@@ -403,6 +437,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/views.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360views',
+					'id' : '/modules/views',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/views',
+				},
 				chapters : [
 					{
 						name : 'URLconfs',
@@ -477,6 +517,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/cbv.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360classbaseviews',
+					'id' : '/modules/classbaseviews',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/classbaseviews',
+				},
 				chapters : [
 					{
 						name : 'Base Views: View',
@@ -628,6 +674,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/templates.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360templates',
+					'id' : '/modules/templates',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/templates',
+				},
 				chapters : [
 					{
 						name : 'Sintaxe',
@@ -702,6 +754,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/statics.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360staticsmedia',
+					'id' : '/modules/staticsmedia',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/staticsmedia',
+				},
 				chapters : [
 					{
 						name : 'Arquivos estáticos',
@@ -732,6 +790,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/forms.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360forms',
+					'id' : '/modules/forms',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/forms',
+				},
 				chapters : [
 					{
 						name : 'Formulários basicos',
@@ -817,6 +881,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/signals.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360signals',
+					'id' : '/modules/signals',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/signals',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -869,6 +939,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/ajax.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360ajax',
+					'id' : '/modules/ajax',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/ajax',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -921,6 +997,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/apis.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360criandoapis',
+					'id' : '/modules/criandoapis',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/criandoapis',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -995,6 +1077,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/admin.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360contribadmin',
+					'id' : '/modules/contribadmin',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/contribadmin',
+				},
 				chapters : [
 					{
 						name : 'ModelAdmin',
@@ -1058,6 +1146,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/auth.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360contribauth',
+					'id' : '/modules/contribauth',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/contribauth',
+				},
 				chapters : [
 					{
 						name : 'User Model',
@@ -1121,6 +1215,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/emails.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360emails',
+					'id' : '/modules/emails',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/emails',
+				},
 				chapters : [
 					{
 						name : 'Mandrill',
@@ -1151,6 +1251,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/tests.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360testesautomatizados',
+					'id' : '/modules/testesautomatizados',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/testesautomatizados',
+				},
 				chapters : [
 					{
 						name : 'Test Driven Development',
@@ -1203,6 +1309,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/cache.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360caching',
+					'id' : '/modules/caching',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/caching',
+				},
 				chapters : [
 					{
 						name : 'Caching',
@@ -1255,6 +1367,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/deployment.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360deployment',
+					'id' : '/modules/deployment',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/deployment',
+				},
 				chapters : [
 					{
 						name : 'Heroku',
@@ -1318,6 +1436,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/social.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360pythonsocialauth',
+					'id' : '/modules/pythonsocialauth',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/pythonsocialauth',
+				},
 				chapters : [
 					{
 						name : 'Python Social Auth',
@@ -1403,6 +1527,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/payment.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360pagamentos',
+					'id' : '/modules/pagamentos',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/pagamentos',
+				},
 				chapters : [
 					{
 						name : 'Paypal',
@@ -1444,6 +1574,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/celery.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360celery',
+					'id' : '/modules/celery',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/celery',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -1496,6 +1632,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/security.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360seguranca',
+					'id' : '/modules/seguranca',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/seguranca',
+				},
 				chapters : [
 					{
 						name : 'Segurança em Django',
@@ -1548,6 +1690,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/optimization.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360otimizacao',
+					'id' : '/modules/otimizacao',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/otimizacao',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -1578,6 +1726,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/reports.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360relatorios',
+					'id' : '/modules/relatorios',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/relatorios',
+				},
 				chapters : [
 					{
 						name : 'Relatórios em PDF',
@@ -1608,6 +1762,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/tornado.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360tornado',
+					'id' : '/modules/tornado',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/tornado',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -1627,6 +1787,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/nodejs.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360nodejs',
+					'id' : '/modules/nodejs',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/nodejs',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -1646,6 +1812,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/angularjs.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360angularjs',
+					'id' : '/modules/angularjs',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/angularjs',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
@@ -1665,6 +1837,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/project.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360projetopratico',
+					'id' : '/modules/projetopratico',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/projetopratico',
+				},
 				chapters : [
 					{
 						name : 'Criando o projeto prático',
@@ -1684,6 +1862,12 @@ angular.module('app.website.modules', [])
 				icon : 'images/modules/upgrade_dj.png',
 				about : 'Sobre',
 				type : 'silver',
+				disqus : {
+					'shortname' : 'dj360django17para18',
+					'id' : '/modules/django17para18',
+					'title' : 'Comentários',
+					'url' : location.href + 'modules/django17para18',
+				},
 				chapters : [
 					{
 						name : 'Introdução',
