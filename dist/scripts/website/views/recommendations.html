@@ -1,1 +1,20 @@
-<div layout="column" layout-fill ng-controller="RecommendationsCtrl"> <div class="container"> <div layout="row" layout-fill layout-align="space-around center"> <div ng-repeat="rec in recommendations" class="recommendations"> <a href="{{rec.link}}" target="_blank"> <div layout="row"> <img alt="" ng-src="{{rec.img}}" style="max-height: 100px; max-width: 100px"> <div layout="column"> <h3>{{rec.title}}</h3> <h4>Autor: {{rec.autor}}</h4> <h5>Sobre: {{rec.about}}</h5> <p>Minha opinião: {{rec.my_opinion}}</p> </div> </div> </a> </div> </div> </div> </div>
+<div layout="column" layout-fill ng-controller="RecommendationsCtrl">
+	<div class="container">
+		<div layout="row" layout-fill layout-align="space-around center">
+			<div ng-repeat="rec in recommendations" class="recommendations">
+				<a href="{{rec.link}}" target="_blank">
+					<div layout="row">
+						<img alt="" ng-src="{{rec.img}}"
+							style="max-height: 100px; max-width: 100px;">
+						<div layout="column">
+							<h3>{{rec.title}}</h3>
+							<h4>Autor: {{rec.autor}}</h4>
+							<h5>Sobre: {{rec.about}}</h5>
+							<p>Minha opinião: {{rec.my_opinion}}</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

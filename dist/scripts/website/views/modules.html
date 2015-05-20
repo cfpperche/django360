@@ -1,11 +1,106 @@
-<div layout="row" layout-fill ng-controller="ModulesCtrl"> <div id="quickmenu"> <div layout="column"> <ul ng-repeat="module in modules track by $index" class="module"> <a href="" ng-click="gotoAnchor($index+1)">{{$index+1}} - {{module.name}}</a> </ul> </div> </div> <div class="container"> <div ui-accordion ng-repeat="module in modules track by $index" class="panel panel-primary module" id="module{{$index+1}}"> <!-- panel-heading --> <div layout="row" layout-fill layout-align="start center" class="panel-heading"> <div style="margin-right: 6px"> <img alt="{{module.name}}" ng-src="{{module.icon}}" class="img-rounded" style="height: 128px; width: 128px"> <!-- <span class="fa-stack fa-5x"> --> <!-- <i class="fa fa-circle fa-stack-2x"></i> --> <!-- <i class="fa {{module.icon}}  fa-stack-1x fa-inverse text-primary"></i> --> <!-- </span> --> </div> <div> <h4>Módulo {{$index+1}}</h4> <h3>{{module.name}}</h3> <blockquote> <p>{{module.about}}</p> </blockquote> </div> </div> <!-- panel-body --> <div layout="row" layout-fill layout-align="space-between center" class="panel-body"> <div layout="row" layout-fill layout-align="start center"> <h4> <i class="fa fa-leanpub"></i> Capítulos </h4> </div> <div layout="column" layout-fill layout-align="center center"> <div> <small>Progresso</small> <small>0%</small> </div> <md-progress-linear md-mode="determinate" ng-value="0"></md-progress-linear> </div> <div layout="row" layout-fill layout-align="end center"> <button href="" class="btn btn-default collapsible"> <i class="fa fa-lg fa-eye"></i> </button> </div> </div> <!-- list-group --> <ul class="list-group chapters"> <li ng-repeat="chapter in module.chapters track by $index" class="list-group-item"> <div layout="row"> <span> <i class="fa fa-caret-right"></i> {{chapter.name}} </span> <span> <a href=""> <i class="fa fa-lg fa-thumbs-up"></i> </a> <small>0</small> <a href=""> <i class="fa fa-lg fa-thumbs-down"></i> </a> <small>0</small> </span> <span flex></span> <span class="module-classes"> <a ng-if="chapter.video"> <i class="fa fa-lg fa-file-video-o"></i> </a> <a ng-if="chapter.pdf"> <i class="fa fa-lg fa-file-pdf-o"></i> </a> </span> </div> </li> </ul> <!-- panel-footer --> <div layout="row" layout-fill layout-align="space-between center" class="panel-footer"> <div> <span class="label label-info"> <i class="fa fa-lg fa-unlock-alt"> 0 de {{module.chapters.length}} </i> </span> </div> <div> <span class="label label-warning"> <a ng-click="openComments('lg', module.disqus)" href="" style="color: #fff"> <i class="fa fa-lg fa-comments-o"> 0 Comentários </i> </a> </span> </div> </div> </div> </div> </div> <script type="text/ng-template" id="modalComments.html"><div class="modal-header">
-	<h3 class="modal-title">{{disqus.title}}</h3>
+<div layout="row" layout-fill ng-controller="ModulesCtrl">
+	<div id="quickmenu">
+		<div layout="column">
+			<ul ng-repeat="module in modules track by $index" class="module">
+				<a href="" ng-click="gotoAnchor($index+1)">{{$index+1}} -
+					{{module.name}}</a>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<div ui-accordion ng-repeat="module in modules track by $index"
+			class="panel panel-primary module" id="module{{$index+1}}">
+			<!-- panel-heading -->
+			<div layout="row" layout-fill layout-align="start center"
+				class="panel-heading">
+				<div style="margin-right: 6px;">
+					<img alt="{{module.name}}" ng-src="{{module.icon}}"
+						class="img-rounded" style="height: 128px; width: 128px;">
+					<!-- <span class="fa-stack fa-5x"> -->
+					<!-- <i class="fa fa-circle fa-stack-2x"></i> -->
+					<!-- <i class="fa {{module.icon}}  fa-stack-1x fa-inverse text-primary"></i> -->
+					<!-- </span> -->
+				</div>
+				<div>
+					<h4>Módulo {{$index+1}}</h4>
+					<h3>{{module.name}}</h3>
+					<blockquote>
+						<p>{{module.about}}</p>
+					</blockquote>
+				</div>
+			</div>
+			<!-- panel-body -->
+			<div layout="row" layout-fill layout-align="space-between center"
+				class="panel-body">
+				<div layout="row" layout-fill layout-align="start center">
+					<h4>
+						<i class="fa fa-leanpub"></i>
+						Capítulos
+					</h4>
+				</div>
+				<div layout="column" layout-fill layout-align="center center">
+					<div>
+						<small>Progresso</small>
+						<small>0%</small>
+					</div>
+					<md-progress-linear md-mode="determinate" ng-value="0"></md-progress-linear>
+				</div>
+				<div layout="row" layout-fill layout-align="end center">
+					<button href="" class="btn btn-default collapsible">
+						<i class="fa fa-lg fa-eye"></i>
+					</button>
+				</div>
+			</div>
+			<!-- list-group -->
+			<ul class="list-group chapters">
+				<li ng-repeat="chapter in module.chapters track by $index"
+					class="list-group-item">
+					<div layout="row">
+						<span>
+							<i class="fa fa-caret-right"></i>
+							{{chapter.name}}
+						</span>
+						<span>
+							<a href="">
+								<i class="fa fa-lg fa-thumbs-up"></i>
+							</a>
+							<small>0</small>
+							<a href="">
+								<i class="fa fa-lg fa-thumbs-down"></i>
+							</a>
+							<small>0</small>
+						</span>
+						<span flex></span>
+						<span class="module-classes">
+							<a ng-if="chapter.video">
+								<i class="fa fa-lg fa-file-video-o"></i>
+							</a>
+							<a ng-if="chapter.pdf">
+								<i class="fa fa-lg fa-file-pdf-o"></i>
+							</a>
+						</span>
+					</div>
+				</li>
+			</ul>
+			<!-- panel-footer -->
+			<div layout="row" layout-fill layout-align="space-between center"
+				class="panel-footer">
+				<div>
+					<span class="label label-info">
+						<i class="fa fa-lg fa-unlock-alt"> 0 de
+							{{module.chapters.length}} </i>
+					</span>
+				</div>
+				<div>
+					<span class="label label-warning">
+						<a ng-click="openComments('lg', module.disqus)" href=""
+							style="color: #fff;">
+							<i class="fa fa-lg fa-comments-o"> 0 Comentários </i>
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
-<div class="modal-body">
-	<dir-disqus disqus-shortname="disqus.shortname"
-		disqus-identifier="{{ disqus.id }}" disqus-url="{{ disqus.url }}"
-		ready-to-bind="true"> </dir-disqus>
-</div>
-<div class="modal-footer">
-	<button class="btn btn-warning" ng-click="close()">Close</button>
-</div></script>

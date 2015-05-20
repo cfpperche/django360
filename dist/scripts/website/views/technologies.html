@@ -1,1 +1,16 @@
-<div layout="column" layout-fill ng-controller="TechnologiesCtrl"> <div class="container"> <div> <span ng-repeat="item in technologies track by $index"> <a ng-href="{{item.link}}" target="_blank"> <img alt="{{item.about}}" ng-src="{{item.icon}}" style="display: inline-block !important; max-width: 200px; max-height: 60px; margin: 40px"> </a> </span> <span> <h1 style="display: inline-block !important; max-width: 200px; max-height: 60px; margin: 40px; font-size: 40px; font-weight: bolder">...</h1> </span> </div> </div> </div>
+<div layout="column" layout-fill ng-controller="TechnologiesCtrl">
+	<div class="container">
+		<div>
+			<span ng-repeat='item in technologies track by $index'>
+				<a ng-href="{{item.link}}" target="_blank">
+					<img alt="{{item.about}}" ng-src="{{item.icon}}"
+						style="display: inline-block !important; max-width: 200px; max-height: 60px; margin: 40px;">
+				</a>
+			</span>
+			<span>
+				<h1
+					style="display: inline-block !important; max-width: 200px; max-height: 60px; margin: 40px; font-size: 40px; font-weight: bolder;">...</h1>
+			</span>
+		</div>
+	</div>
+</div>

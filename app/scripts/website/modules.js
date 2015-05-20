@@ -46,7 +46,7 @@ angular.module('app.website.modules', [])
 
 			var modalInstance = $modal.open({
 				animation : true,
-				templateUrl : 'modalComments.html',
+				template : '<div class="modal-header">' + '<h4 class="modal-title">{{disqus.title}} - {{disqus.shortname}}</h4> ' + '</div>' + '<div class="modal-body">' + '<dir-disqus disqus-shortname="{{disqus.shortname}}"' + 'disqus-identifier="{{ disqus.id }}" disqus-url="{{ disqus.url }}"' + 'ready-to-bind="true"> </dir-disqus>' + '</div>' + '<div class="modal-footer">' + '<button class="btn btn-warning" ng-click="close()">Close</button>' + '</div>',
 				controller : 'modalController',
 				size : size,
 				resolve : {
