@@ -73,10 +73,13 @@
 						<span flex></span>
 						<span class="module-classes">
 							<a ng-if="chapter.video">
-								<i class="fa fa-lg fa-file-video-o"></i>
+								<i class="fa fa-lg fa-youtube"></i>
 							</a>
 							<a ng-if="chapter.pdf">
-								<i class="fa fa-lg fa-file-pdf-o"></i>
+								<i class="fa fa-lg fa-slideshare"></i>
+							</a>
+							<a ng-if="chapter.git">
+								<i class="fa fa-lg fa-github-alt"></i>
 							</a>
 						</span>
 					</div>
@@ -95,7 +98,13 @@
 					<span class="label label-warning">
 						<a ng-click="openComments('lg', module.disqus)" href=""
 							style="color: #fff;">
-							<i class="fa fa-lg fa-comments-o"> 0 Comentários </i>
+							<!-- <i class="fa fa-lg fa-comments-o"> 0 Comentários </i> -->
+							<i class="fa fa-lg fa-comments-o">
+								<app-disqus-count disqus-shortname="{{module.disqus.shortname}}"
+									disqus-identifier="{{module.disqus.id }}"
+									disqus-url="{{ module.disqus.url }}"></app-disqus-count>
+								Comentários
+							</i>
 						</a>
 					</span>
 				</div>

@@ -18,7 +18,7 @@ angular.module('application', [
 	'angular-blocks',
 	'toasty',
 	'ui.bootstrap',
-	'angularUtils.directives.dirDisqus',
+	'app.directives.disqus',
 	'app.website'
 ])
 

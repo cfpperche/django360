@@ -14,8 +14,9 @@ angular.module('app.website.modules', [])
 	'disqus',
 	function($scope, $modalInstance, disqus) {
 		$scope.disqus = disqus;
-
+		$scope.contentLoaded = true;
 		$scope.close = function() {
+			$scope.contentLoaded = false;
 			$modalInstance.dismiss('close');
 		};
 	}
@@ -46,7 +47,7 @@ angular.module('app.website.modules', [])
 
 			var modalInstance = $modal.open({
 				animation : true,
-				template : '<div class="modal-header">' + '<h4 class="modal-title">{{disqus.title}} - {{disqus.shortname}}</h4> ' + '</div>' + '<div class="modal-body">' + '<dir-disqus disqus-shortname="{{disqus.shortname}}"' + 'disqus-identifier="{{ disqus.id }}" disqus-url="{{ disqus.url }}"' + 'ready-to-bind="true"> </dir-disqus>' + '</div>' + '<div class="modal-footer">' + '<button class="btn btn-warning" ng-click="close()">Close</button>' + '</div>',
+				template : '<div class="modal-header">' + '<h4 class="modal-title">{{disqus.title}}</h4> ' + '</div>' + '<div class="modal-body">' + '<app-disqus-comments disqus-shortname="{{disqus.shortname}}"' + 'disqus-identifier="{{ disqus.id }}" disqus-url="{{ disqus.url }}"' + 'ready-to-bind="{{ contentLoaded }}"> </app-disqus-comments>' + '</div>' + '<div class="modal-footer">' + '<button class="btn btn-danger" ng-click="close()">Close</button>' + '</div>',
 				controller : 'modalController',
 				size : size,
 				resolve : {
@@ -83,8 +84,11 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
-
 					},
 					{
 						name : 'Fundamentos',
@@ -94,6 +98,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -105,6 +113,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -130,6 +142,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -141,6 +157,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -152,6 +172,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -163,6 +187,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -188,6 +216,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -199,6 +231,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -210,6 +246,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -235,6 +275,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -246,6 +290,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -257,6 +305,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -268,6 +320,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -293,6 +349,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -304,6 +364,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -315,6 +379,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -326,6 +394,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -337,6 +409,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -348,6 +424,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -359,6 +439,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -370,6 +454,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -381,6 +469,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -406,6 +498,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -417,6 +513,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -428,6 +528,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -453,6 +557,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -464,6 +572,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -475,6 +587,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -486,6 +602,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -497,6 +617,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -508,6 +632,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -533,6 +661,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -544,6 +676,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -555,6 +691,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -566,6 +706,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -577,6 +721,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -588,6 +736,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -599,6 +751,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -610,6 +766,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -621,6 +781,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -632,6 +796,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -643,6 +811,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -654,6 +826,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -665,6 +841,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -690,6 +870,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -701,6 +885,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -712,6 +900,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -723,6 +915,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -734,6 +930,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -745,6 +945,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -770,6 +974,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -781,6 +989,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -806,6 +1018,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -817,6 +1033,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -828,6 +1048,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -839,6 +1063,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -850,6 +1078,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -861,6 +1093,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -872,6 +1108,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -897,6 +1137,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -908,6 +1152,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -919,6 +1167,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -930,6 +1182,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -955,6 +1211,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -966,6 +1226,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -977,6 +1241,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -988,6 +1256,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1013,6 +1285,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1024,6 +1300,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1035,6 +1315,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1046,6 +1330,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1057,6 +1345,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1068,6 +1360,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1093,6 +1389,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1104,6 +1404,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1115,6 +1419,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1126,6 +1434,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1137,6 +1449,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -1162,6 +1478,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1173,6 +1493,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1184,6 +1508,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1195,6 +1523,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1206,6 +1538,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1231,6 +1567,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1242,6 +1582,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1267,6 +1611,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1278,6 +1626,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1289,6 +1641,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1300,6 +1656,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1325,6 +1685,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1336,6 +1700,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1347,6 +1715,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1358,6 +1730,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1383,6 +1759,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1394,6 +1774,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1405,6 +1789,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1416,6 +1804,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1427,6 +1819,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1452,6 +1848,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1463,6 +1863,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1474,6 +1878,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1485,6 +1893,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1496,6 +1908,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1507,6 +1923,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1518,6 +1938,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1543,6 +1967,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1554,6 +1982,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1565,6 +1997,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1590,6 +2026,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1601,6 +2041,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1612,6 +2056,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1623,6 +2071,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1648,6 +2100,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1659,6 +2115,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1670,6 +2130,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1681,6 +2145,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1706,6 +2174,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1717,6 +2189,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1742,6 +2218,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1753,6 +2233,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1778,6 +2262,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1803,6 +2291,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1828,6 +2320,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
@@ -1853,6 +2349,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					}
 				]
@@ -1878,6 +2378,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1889,6 +2393,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1900,6 +2408,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1911,6 +2423,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1922,6 +2438,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1933,6 +2453,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1944,6 +2468,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1955,6 +2483,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1966,6 +2498,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1977,6 +2513,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 					{
@@ -1988,6 +2528,10 @@ angular.module('app.website.modules', [])
 						},
 						pdf : {
 							url : 'link'
+						},
+						git : {
+							url : 'link',
+							gist : 'link',
 						}
 					},
 				]
