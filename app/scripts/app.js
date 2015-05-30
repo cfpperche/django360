@@ -15,11 +15,11 @@ angular.module('application', [
 	'ngRoute',
 	'ui.router',
 	'ngMaterial',
-	'angular-blocks',
-	'toasty',
 	'ui.bootstrap',
 	'app.directives.disqus',
-	'app.website'
+	'app.directives.accordion',
+	'app.services',
+	'app.webapp'
 ])
 
 // Constants
@@ -54,40 +54,5 @@ angular.module('application', [
 		});
 
 		$urlRouterProvider.otherwise('/');
-	}
-])
-
-.factory('notificationsFactory', [
-	'toasty',
-	'$timeout',
-	'$window',
-	function(toasty, $timeout, $window) {
-		return {
-			success : function(title, msg) {
-				if (angular.isUndefined(title)) {
-					title = 'Webapp success';
-				}
-				if (angular.isUndefined(msg)) {
-					msg = 'Success messagem';
-				}
-				toasty.pop.success({
-					title : title,
-					msg : msg,
-				});
-
-			},
-			error : function(title, msg) {
-				if (angular.isUndefined(title)) {
-					title = 'Webapp error';
-				}
-				if (angular.isUndefined(msg)) {
-					msg = 'Error messagem';
-				}
-				toasty.pop.error({
-					title : title,
-					msg : msg,
-				});
-			},
-		};
 	}
 ]);

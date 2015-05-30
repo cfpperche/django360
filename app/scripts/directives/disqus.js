@@ -12,6 +12,7 @@ angular.module('app.directives.disqus', [])
 	'$window',
 	'$document',
 	function($window, $document) {
+
 		return {
 			restrict : 'E',
 			scope : {
@@ -26,6 +27,8 @@ angular.module('app.directives.disqus', [])
 				disqus_api_key : '@disqusApiKey',
 				readyToBind : "@"
 			},
+			// template : '<div id="disqus_thread"></div><a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+			// class="logo-disqus">Disqus</span></a>',
 			template : '<div id="disqus_thread"></div><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>',
 			link : function(scope, element, attr) {
 				// ensure that the disqus_identifier and disqus_url are both set, otherwise we will run in to identifier conflicts when
@@ -86,8 +89,8 @@ angular.module('app.directives.disqus', [])
 ])
 
 .directive('appDisqusCount', [
-	'$document',
-	function($document) {
+	'$window',
+	function($window) {
 		return {
 			restrict : 'E',
 			replace : false,
@@ -96,11 +99,14 @@ angular.module('app.directives.disqus', [])
 				disqus_identifier : '@disqusIdentifier',
 				disqus_title : '@disqusTitle',
 				disqus_url : '@disqusUrl',
+				readyToBind : "@"
 			},
 			template : '<span class="disqus-comment-count" data-disqus-identifier="{{disqus_identifier}}"></span>',
-			// template : '<a href="{{disqus_url}}#disqus_thread" data-disqus-identifier="{{disqus_identifier}}">First article</a>',
+			// template : '<a href="{{disqus_url}}#disqus_thread" data-disqus-url="{{dataUrl}}">First article</a>',
 
 			link : function(scope) {
+
+				scope.dataUrl = scope.disqus_shortname + '.disqus.com';
 				// ensure that the disqus_identifier and disqus_url are both set, otherwise we will run in to identifier conflicts when
 				// using URLs with "#" in them
 				// see http://help.disqus.com/customer/portal/articles/662547-why-are-the-same-comments-showing-up-on-multiple-pages-
@@ -108,11 +114,22 @@ angular.module('app.directives.disqus', [])
 					throw "Please ensure that the `disqus-identifier` and `disqus-url` attributes are both set.";
 				};
 
-				var s = document.createElement('script');
-				s.async = true;
-				s.type = 'text/javascript';
-				s.src = '//' + scope.disqus_shortname + '.disqus.com/count.js';
-				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				scope.$watch("readyToBind", function(isReady) {
+					if (isReady) {
+						if (!$window.DISQUSWIDGETS) {
+							(function() {
+								var s = document.createElement('script');
+								s.async = true;
+								s.type = 'text/javascript';
+								s.src = '//' + scope.disqus_shortname + '.disqus.com/count.js';
+								(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+							}());
+						} else {
+							$window.DISQUSWIDGETS = undefined;
+							$.getScript("http://" + scope.disqus_shortname + ".disqus.com/count.js");
+						};
+					}
+				});
 			}
 		}
 	}

@@ -12,7 +12,6 @@
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 <!-- build:css(.) styles/vendor.css -->
 <!-- bower:css -->
-<link rel="stylesheet" href="bower_components/angular-toasty/css/ng-toasty.css" />
 <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
 <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
 <!-- endbower -->
@@ -26,17 +25,10 @@
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	    <![endif]-->
 </head>
-<body layout="row" layout-fill ng-controller="AppCtrl">
+<body ng-controller="AppCtrl">
 	<!-- Webapp main view -->
 	<div data-ui-view></div>
 
-	<!-- Angular toasty -->
-	<!-- Toasty controller, add this to your index page / default template -->
-	<div data-ng-controller="toasty-controller">
-		<toasty-container
-			toasty-defaults='{"timeout": 3000, "close-button":true}'>
-		</toasty-container>
-	</div>
 	<!-- Vendor Javascript -->
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 	<script>
@@ -73,8 +65,6 @@
 	<script src="bower_components/angular-touch/angular-touch.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="bower_components/angular-blocks/dist/angular-blocks.js"></script>
-	<script src="bower_components/angular-toasty/js/ng-toasty.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.js"></script>
 	<script src="bower_components/angular-material/angular-material.js"></script>
 	<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
@@ -87,15 +77,15 @@
 	<!-- build:js({.temp,app}) scripts/scripts.js -->
 	<!-- include: "type": "js", "files": "scripts/**/*.js" -->
 	<script src="scripts/app.js"></script>
+	<script src="scripts/directives/accordion.js"></script>
 	<script src="scripts/directives/disqus.js"></script>
-	<script src="scripts/services.js"></script>
-	<script src="scripts/website/app.website.js"></script>
-	<script src="scripts/website/controllers.js"></script>
-	<script src="scripts/website/directives.js"></script>
-	<script src="scripts/website/main_subjects.js"></script>
-	<script src="scripts/website/modules.js"></script>
-	<script src="scripts/website/recommendations.js"></script>
-	<script src="scripts/website/technologies.js"></script>
+	<script src="scripts/services/services.js"></script>
+	<script src="scripts/webapp/controllers.js"></script>
+	<script src="scripts/webapp/modules.js"></script>
+	<script src="scripts/webapp/recommendations.js"></script>
+	<script src="scripts/webapp/subjects.js"></script>
+	<script src="scripts/webapp/technologies.js"></script>
+	<script src="scripts/webapp/webapp.js"></script>
 	<!-- /include -->
 	<!-- endbuild -->
 </body>
