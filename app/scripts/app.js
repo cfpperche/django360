@@ -16,8 +16,11 @@ angular.module('application', [
 	'ui.router',
 	'ngMaterial',
 	'ui.bootstrap',
-	'app.directives.disqus',
 	'app.directives.accordion',
+	'app.directives.disqus',
+	'app.directives.gist',
+	'app.directives.slideshare',
+	'app.directives.youtube',
 	'app.services',
 	'app.webapp'
 ])

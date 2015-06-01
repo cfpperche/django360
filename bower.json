@@ -17,7 +17,9 @@
     "bootstrap-sass-official": "latest",
     "angular-bootstrap": "~0.12.0",
     "font-awesome": "~4.3.0",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "angular-gist-embed": "~0.0.3",
+    "angular-youtube-mb": "~1.0.2"
   },
   "devDependencies": {
     "angular-mocks": "latest",

@@ -79,13 +79,14 @@
 					</span>
 					<span flex></span>
 					<span class="module-classes">
-						<a ng-if="chapter.video">
+						<a ng-if="chapter.video"
+							ng-click="openYoutube('lg', chapter.video)">
 							<i class="fa fa-lg fa-youtube"></i>
 						</a>
-						<a ng-if="chapter.pdf">
+						<a ng-if="chapter.pdf" ng-click="openSlideshare('lg', chapter.pdf)">
 							<i class="fa fa-lg fa-slideshare"></i>
 						</a>
-						<a ng-if="chapter.git">
+						<a ng-if="chapter.git" ng-click="openGist('lg', chapter.git.gist)">
 							<i class="fa fa-lg fa-github-alt"></i>
 						</a>
 					</span>
@@ -103,7 +104,7 @@
 			</div>
 			<div>
 				<span class="label label-warning">
-					<a ng-click="openComments('lg', module.disqus)" href=""
+					<a ng-click="openDisqus('lg', module.disqus)" href=""
 						style="color: #fff;">
 						<!-- <i class="fa fa-lg fa-comments-o"> 0 Comentários </i> -->
 						<i class="fa fa-lg fa-comments-o">
