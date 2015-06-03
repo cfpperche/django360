@@ -1,0 +1,23 @@
+<div ng-controller="SubjectsCtrl" layout="row" layout-padding
+	layout-margin layout-align="space-around center">
+	<div layout="column" layout-padding layout-margin
+		layout-align="center start">
+		<div flex ng-repeat="subject in subjects track by $index"
+			ng-if="$index < subjects.length/2">
+			<h4>
+				<i class="fa fa-lg {{subject.icon}} text-primary"> </i>
+				{{subject.label}}
+			</h4>
+		</div>
+	</div>
+	<div layout="column" layout-padding layout-margin
+		layout-align="center start">
+		<div flex ng-repeat="subject in subjects track by $index"
+			ng-if="$index >= subjects.length/2">
+			<h4>
+				<i class="fa fa-lg {{subject.icon}} text-primary"> </i>
+				{{subject.label}}
+			</h4>
+		</div>
+	</div>
+</div>
