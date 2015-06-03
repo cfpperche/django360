@@ -12,17 +12,12 @@
 	<div ng-switch-when="subjects">
 		<div ng-include="'scripts/webapp/views/templates/subjects.html'"></div>
 	</div>
-	<div ng-switch-when="cheatsheet">
-		<div
-			ng-include="'scripts/webapp/views/templates/cheatsheet.html'"></div>
-	</div>
 	<div ng-switch-when="recommendations">
 		<div
 			ng-include="'scripts/webapp/views/templates/recommendations.html'"></div>
 	</div>
 	<div ng-switch-when="about">
-		<div
-			ng-include="'scripts/webapp/views/templates/about.html'"></div>
+		<div ng-include="'scripts/webapp/views/templates/about.html'"></div>
 	</div>
 	<div ng-switch-default>
 		<md-input-container label="Active Title"

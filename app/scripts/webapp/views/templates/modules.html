@@ -1,4 +1,4 @@
-<div layout="row" ng-controller="ModulesCtrl">
+<div ng-init="init()" layout="row" ng-controller="ModulesCtrl">
 
 	<md-content role="navigation" layout-padding>
 	<ul ng-repeat="module in modules track by $index" class="module">
@@ -67,7 +67,7 @@
 						<i class="fa fa-caret-right"></i>
 						{{chapter.name}}
 					</span>
-					<span>
+					<!-- <span>
 						<a href="">
 							<i class="fa fa-lg fa-thumbs-up"></i>
 						</a>
@@ -76,14 +76,15 @@
 							<i class="fa fa-lg fa-thumbs-down"></i>
 						</a>
 						<small>0</small>
-					</span>
+					</span> -->
 					<span flex></span>
 					<span class="module-classes">
 						<a ng-if="chapter.video"
 							ng-click="openYoutube('lg', chapter.video)">
 							<i class="fa fa-lg fa-youtube"></i>
 						</a>
-						<a ng-if="chapter.pdf" ng-click="openSlideshare('lg', chapter.pdf)">
+						<a ng-if="chapter.pdf"
+							ng-click="openSlideshare('lg', chapter.pdf)">
 							<i class="fa fa-lg fa-slideshare"></i>
 						</a>
 						<a ng-if="chapter.git" ng-click="openGist('lg', chapter.git.gist)">
@@ -108,7 +109,7 @@
 						style="color: #fff;">
 						<!-- <i class="fa fa-lg fa-comments-o"> 0 Comentários </i> -->
 						<i class="fa fa-lg fa-comments-o">
-							<app-disqus-count ready-to-bind="{{ true }}"
+							<app-disqus-count ready-to-bind="{{ readyToBind }}"
 								disqus-shortname="{{module.disqus.shortname}}"
 								disqus-identifier="{{module.disqus.id }}"
 								disqus-url="{{ module.disqus.url }}"></app-disqus-count>

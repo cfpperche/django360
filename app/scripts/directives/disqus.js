@@ -116,18 +116,12 @@ angular.module('app.directives.disqus', [])
 
 				scope.$watch("readyToBind", function(isReady) {
 					if (isReady) {
-						if (!$window.DISQUSWIDGETS) {
-							(function() {
-								var s = document.createElement('script');
-								s.async = true;
-								s.type = 'text/javascript';
-								s.src = '//' + scope.disqus_shortname + '.disqus.com/count.js';
-								(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-							}());
-						} else {
-							$window.DISQUSWIDGETS = undefined;
-							$.getScript("http://" + scope.disqus_shortname + ".disqus.com/count.js");
-						};
+
+						var s = document.createElement('script');
+						s.async = true;
+						s.type = 'text/javascript';
+						s.src = 'http://' + scope.disqus_shortname + '.disqus.com/count.js';
+						(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 					}
 				});
 			}

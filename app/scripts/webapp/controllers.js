@@ -39,12 +39,6 @@ angular.module('app.webapp.controllers', [])
 				content : "coming soon"
 			},
 			{
-				name : 'cheatsheet',
-				title : 'Cheatsheet',
-				icon : 'fa fa-user',
-				content : "coming soon"
-			},
-			{
 				name : 'recommendations',
 				title : 'Recomendo',
 				icon : 'fa fa-user',
