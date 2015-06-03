@@ -11,7 +11,7 @@ echo +++++ GIT ADD --ALL +++++
 git add --all
 
 echo +++++ GIT COMMIT +++++
-git commit -m 'teste 0.0.1'
+git commit -m 'teste 0.0.2'
 
 echo +++++ GIT DELETE GH_PAGES +++++
 git push origin --delete gh-pages
